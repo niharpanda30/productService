@@ -6,8 +6,8 @@ import lombok.Data;
 
 @Data
 @Entity(name = "ms_instructor")
-public class Instructor extends User {
-//    @Id
-//    private Long id;
+public class Instructor {
+    @Id
+    private Long id;
     private String favouriteStudent;
 }

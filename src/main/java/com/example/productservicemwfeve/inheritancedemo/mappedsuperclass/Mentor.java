@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 @Entity(name = "ms_mentor")
 public class Mentor extends User {
-//    @Id
-//    private Long id;
+    @Id
+    private Long id;
     private double averageRating;
 }

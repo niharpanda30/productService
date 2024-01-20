@@ -46,6 +46,16 @@ public class ProductController {
         return productService.replaceProduct(id, product);
     }
 
+    @PostMapping("/addNewProduct")
+    public Product addNewProduct(@RequestBody Product product) {
+        return productService.addNewproduct(product);
+    }
+
+    @PatchMapping("/{id}")
+    public Product updateProduct(@PathVariable Long id, @RequestBody Product product){
+        return productService.updateProduct(id, product);
+    }
+
     /*This exception handler is prepared to Handle an Exception at the class level.
     * Controller Advices are prepared to handle Exception at Global levels
     * Priority of execution of Controller level Exception is greater than Global level.
